@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_outstanding">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                 <div class="text-center">
+                        <h2>Outstanding Invoices</h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4 class="text-center">
+                            Report from
+                            <strong><t t-esc="data['form']['start_date']"/></strong>
+                            to
+                            <strong><t t-esc="data['form']['end_date']"/></strong>
+                        </h4>
+                    </div>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Invoice Date</th>
+                                <th>Number</th>
+                                <th>Sales Person</th>
+                                <th>Due Date</th>
+                                <th class="text-right">Total</th>
+                                <th class="text-right">Amount Due</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sale_tbody">
+                            <t t-foreach="data['invoices']" t-as="invoice">
+                                <tr>
+                                    <td><span t-esc="invoice.partner_id.name"/></td>
+                                    <td><span t-field="invoice.date_invoice"/></td>
+                                    <td><span t-field="invoice.number"/></td>
+                                    <td><span t-field="invoice.user_id"/></td>
+                                    <td><span t-field="invoice.date_due"/></td>
+                                    <td class="text-right"><span t-field="invoice.amount_total"/></td>
+                                    <td class="text-right"><span t-field="invoice.residual"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                        <tr class="text-right">
+                            <td colspan="6"><strong>Total Outstanding Amount:</strong></td>
+                            <td  >
+                                <span  t-esc="data['amount_total']" t-options='{"widget": "monetary", "display_currency": user.company_id.currency_id}'/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

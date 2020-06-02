@@ -1,0 +1,46 @@
+<odoo>
+	<data>
+		<record id="account_invoice_form_inherited_to_add_transaction" model="ir.ui.view">
+			<field name="name">account.invoice.inherited.form</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+				<field name="payment_term_id" position="after">
+					<field name="transaction_number" />
+				</field>
+			</field>
+		</record>
+		<record id="account_invoice_tree_inherited_to_add_transaction" model="ir.ui.view">
+			<field name="name">account.invoice.inherited.tree</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_tree" />
+			<field name="arch" type="xml">
+				<field name="number" position="after">
+					<field name="transaction_number" />
+				</field>
+			</field>
+		</record>
+		
+		<record id="account_invoice_supplier_form_inherited_to_add_transaction" model="ir.ui.view">
+			<field name="name">account.invoice.supplier.inherited.form</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form" />
+			<field name="arch" type="xml">
+				<field name="reference" position="after">
+					<field name="transaction_number" />
+				</field>
+			</field>
+		</record>
+		
+		<record id="account_invoice_supplier_tree_inherited_to_add_transaction" model="ir.ui.view">
+			<field name="name">account.invoice.supplier.inherited.tree</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_supplier_tree" />
+			<field name="arch" type="xml">
+				<field name="reference" position="after">
+					<field name="transaction_number" />
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/unicoding_crm_lead.iml" filepath="$PROJECT_DIR$/.idea/unicoding_crm_lead.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/unicoding_kanban_color.iml" filepath="$PROJECT_DIR$/.idea/unicoding_kanban_color.iml" />
+    </modules>
+  </component>
+</project>

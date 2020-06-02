@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--# Author => Albertus Restiyanto Pramayudha -->
+<!--# email  => xabre0010@gmail.com -->
+<!--# linkedin => https://www.linkedin.com/in/albertus-restiyanto-pramayudha-470261a8/ -->
+
+<odoo>
+    <data>
+         <!--Tree-->
+        <record id="view_report_bank_and_cash_tree" model="ir.ui.view">
+            <field name="name">yudha.bank.kas.tree</field>
+            <field name="model">yudha.bank.kas</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Bank And Cash Register">
+                    <field name="ed_fromdate"/>
+                    <field name="ed_todate"/>
+                    <field name="akunnya"/>
+                </tree>
+            </field>
+        </record>
+
+      <!--Detail-->
+      <record id="view_report_bank_and_cash_form" model="ir.ui.view">
+            <field name="name">yudha.bank.kas.form</field>
+            <field name="model">yudha.bank.kas</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Bank and Cash Register">
+                    <sheet>
+                        <group>
+                               <field name="ed_fromdate"/>
+                               <field name="ed_todate"/>
+                               <field name="akunnya" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit':True,'no_open':True}"/>
+                        </group>
+                        <notebook>
+                            <page string="DETAILS REPORTS" >
+                                <field name="bankcash_ids" widget="one2many_list">
+                                    <tree string="Generate" create="false">
+                                        <field name="namaakun"/>
+                                        <field name="notrans"/>
+                                        <field name="tglakun"/>
+                                        <field name="memo"/>
+                                        <field name="partner" />
+                                        <field name="currency" />
+                                        <field name="foreign_cur"/>
+                                        <field name="deposit" />
+                                        <field name="wd" />
+                                        <field name="balance"/>
+                                    </tree>
+                                </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                <field name="initbal"/>
+                                <field name="balusd"/>
+                                <field name="totaldepo" />
+                                <field name="totalwd"/>
+                                <field name="endingbal"/>
+                                <field name="endusd"/>
+
+                                <!--<field name="amount_tax" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                                <!--<div class="oe_subtotal_footer_separator oe_inline o_td_label">-->
+                                    <!--<label for="amount_total" />-->
+                                <!--</div>-->
+                                <!--<field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                            </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <record id="action_tampil_laporan" model="ir.actions.act_window" >
+              <field name="name">BANK AND CASH REGISTER</field>
+              <field name="res_model">yudha.bank.kas</field>
+              <field name="view_type">form</field>
+              <field name="view_mode">tree,form,pivot</field>
+              <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Klik untuk membuat Aktifitas BANK AND CASH REGISTER BARU
+                </p>
+              </field>
+        </record>
+        <menuitem name="Bank And Cash Register" id="menu_yudha_bank_dan_kas_register" action="action_tampil_laporan" parent="account_reports.account_reports_audit_reports_menu" groups="account.group_account_user"/>
+       <!--<menuitem name="Bank And Cash Register" id="menu_sdt_bank_dan_kas_register" action="action_tampil_laporan" parent="sdt_tally.tally_1" sequence="5"/>-->
+
+    </data>
+</odoo>

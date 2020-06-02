@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of web_manifest module. See LICENSE file for full copyright and licensing details. -->
+<odoo>
+    <template id="assets_backend" name="web_manifest assets" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <link rel="manifest" href="/manifest.json" />
+        </xpath>
+    </template>
+</odoo>

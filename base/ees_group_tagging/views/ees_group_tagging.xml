@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="ees_group_tagging.multi_tag_server_action" model="ir.actions.server">
+    <field name="name">Group Tag / Untag</field><field name="type">ir.actions.server</field>
+    <field name="model_id" ref="ees_group_tagging.model_ees_group_tagging_multi_tag_action"/><field name="state">code</field>
+    <field name="code">action=model.create_wizard()</field>
+	<field name="binding_model_id" ref="base.model_res_partner" />
+    <field name="key2">client_action_multi</field>
+</record>
+<record id="ees_group_tagging.multi_tag_action_form" model="ir.ui.view"><field name="name">ees_group_tagging.multi_tag_action_form</field>
+<field name="model">ees_group_tagging.multi_tag_action</field><field eval="18" name="priority"/>
+<field name="arch" type="xml"><form create="false"><sheet><group>
+<field name="categories" widget="many2many_tags" />
+<field name="partners"><tree><field name="display_name" /><field name="category_id" widget="many2many_tags" /><field name="email" />
+</tree></field>
+</group><footer>
+	<button name="do_tag_all" string="Tag All" type="object" class="btn-primary" />
+	<button name="do_untag_all" string="Untag All" type="object" class="btn-primary" />
+</footer></sheet></form></field></record>
+</odoo>

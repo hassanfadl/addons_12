@@ -1,0 +1,51 @@
+<odoo>
+	<data>
+		<record id="cron_execute_query6hours" forcecreate='True' model="ir.cron">
+	      <field name="name">Execute Query 6 Hours</field>	      
+	      <field eval="True" name="active"/>
+	      <field name="user_id" ref="base.user_root"/>
+	      <field name="interval_number">6</field>
+	      <field name="interval_type">hours</field>
+	      <field name="numbercall">-1</field>
+	      <field name="model_id" ref="model_execute_query"/>
+	      <field name="state">code</field>
+	      <field name="code">model.shceduler_6hours()</field>
+		</record>
+		
+		<record id="cron_execute_querydaily" forcecreate='True' model="ir.cron">
+	      <field name="name">Execute Query Daily</field>	      
+	      <field eval="True" name="active"/>
+	      <field name="user_id" ref="base.user_root"/>
+	      <field name="interval_number">1</field>
+	      <field name="interval_type">days</field>
+	      <field name="numbercall">-1</field>
+	      <field name="model_id" ref="model_execute_query"/>
+	      <field name="state">code</field>
+	      <field name="code">model.scheduler_daily()</field>
+		</record>
+		
+		<record id="cron_execute_queryweekly" forcecreate='True' model="ir.cron">
+	      <field name="name">Execute Query Weekly</field>	      
+	      <field eval="True" name="active"/>
+	      <field name="user_id" ref="base.user_root"/>
+	      <field name="interval_number">1</field>
+	      <field name="interval_type">weeks</field>
+	      <field name="numbercall">-1</field>
+	      <field name="model_id" ref="model_execute_query"/>
+	      <field name="state">code</field>
+	      <field name="code">model.shceduler_weekly()</field>
+		</record>
+		
+		<record id="cron_execute_querymonthly" forcecreate='True' model="ir.cron">
+	      <field name="name">Execute Query Monthly</field>	      
+	      <field eval="True" name="active"/>
+	      <field name="user_id" ref="base.user_root"/>
+	      <field name="interval_number">1</field>
+	      <field name="interval_type">months</field>
+	      <field name="numbercall">-1</field>
+	      <field name="model_id" ref="model_execute_query"/>
+	      <field name="state">code</field>
+	      <field name="code">model.scheduler_monthly()</field>
+		</record>
+	</data>
+</odoo>

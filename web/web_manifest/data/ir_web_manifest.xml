@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="default_manifest" model="ir.web.manifest">
+        <!-- no data needed to specify, all default already sets -->
+    </record>
+</odoo>

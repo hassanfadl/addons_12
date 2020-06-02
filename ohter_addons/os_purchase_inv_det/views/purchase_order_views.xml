@@ -1,0 +1,15 @@
+<odoo>
+<record id="os_purchase_invoice_details" model="ir.ui.view">
+  <field name="name">Purchase Order Form Invoice Details</field>
+  <field name="model">purchase.order</field>
+  <field name="inherit_id" ref="purchase.purchase_order_form"/>
+  <field name="arch" type="xml">
+    <xpath expr="//page[1]/group" position="after">
+      <group class="oe_left" colspan="2" name="purchase_inv_total">
+        <field name="invoice_total" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+        <field name="invoice_due" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+      </group>
+    </xpath>
+  </field>
+</record>
+</odoo>

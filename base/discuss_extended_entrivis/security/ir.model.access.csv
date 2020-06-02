@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_model_discuss_extend__public,access_model_discuss_extend_public,discuss_extended_entrivis.model_discuss_extend,,1,1,1,1

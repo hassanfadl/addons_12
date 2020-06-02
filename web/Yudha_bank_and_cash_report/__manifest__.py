@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Yudha Bank And Cash Report',
+    'version': '11.0.0.0',
+    'category': 'Accounting',
+    'summary': 'Module ini di gunakan untuk reporting bank dan kas',
+    'description': """report, reporting in odoo,
+                      bank and cash,
+                      bank and cash report,
+                      bank and cash odoo,
+                      bank and cash register in odoo,
+    """,
+    'author': 'Albertus Restiyanto Pramayudha',
+    'website': '',
+    'currency': 'EUR',
+    'price': 0,
+    'depends': [
+        'base',
+        'stock',
+        'sale',
+        'account',
+    ],
+    'data': ['views/yudha_bank_and_cash.xml',
+             'report/yudha_bank_and_cash_rpt.xml',],
+    'installable': True,
+    'auto_install': False,
+    "images": ["static/description/icon.png"],
+}

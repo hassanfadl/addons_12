@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of web_manifest module. See LICENSE file for full copyright and licensing details. -->
+<odoo>
+    <!-- Web Manifest Form Views -->
+    <record id="ir_web_manifest_view_form" model="ir.ui.view">
+        <field name="name">ir.web.manifest.form</field>
+        <field name="model">ir.web.manifest</field>
+        <field name="arch" type="xml">
+            <form string="Web Manifest" create="false" delete="false" copy="false">
+                <sheet>
+                    <group name="settings" string="Web Manifest">
+                        <group name="main_group_left">
+                            <field name="name"/>
+                            <field name="short_name"/>
+                            <field name="description"/>
+                            <field name="app_id" />
+                            <field name="app_version" />
+                            <field name="lang_id" />
+                        </group>
+                        <group name="main_group_right" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Web Manifest Tree Views -->
+    <record id="ir_web_manifest_view_tree" model="ir.ui.view">
+        <field name="name">ir.web.manifest.tree</field>
+        <field name="model">ir.web.manifest</field>
+        <field name="arch" type="xml">
+            <tree string="Web Manifest" create="false" delete="false">
+                <field name="name"/>
+                <field name="short_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="ir_web_manifest_action" model="ir.actions.act_window">
+        <field name="name">Web Manifest</field>
+        <field name="res_model">ir.web.manifest</field>
+        <field name='view_type'>form</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <!-- Menus -->
+    <menuitem id="ir_web_manifest_root_menu"
+              name="Web Application"
+              parent="base.menu_custom"
+              sequence="4"/>
+
+    <menuitem id="ir_web_manifest_info_menu"
+        name="Manifest"
+        parent="ir_web_manifest_root_menu"
+        action="ir_web_manifest_action"
+        sequence="10"/>
+</odoo>

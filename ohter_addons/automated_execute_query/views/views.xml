@@ -1,0 +1,76 @@
+<odoo>
+  <data>
+               <record model="ir.ui.view" id="execute_query_form_view">
+                <field name="name">execute.query.form</field>
+                <field name="model">execute.query</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Execute Query">
+                     <header>
+                     	<button name= "execute_manually" type="object" string="Run Manual"/>
+                     </header>
+                     <sheet>                     
+	                    <group>
+	                    	<group><field name="name"/></group>
+	                    	<group>
+	                    		<field name="automate" string = "Run by scheduler?"/>
+	                    		<field name="repetition" string="Execute Every" attrs="{'invisible' : [('automate','=', False)]}"/> 
+	                    		<field name="type" required="True"/>
+	                    	</group>
+	                    </group>
+	                        <label for="query" string="Query : "/>
+	                        <field name="query"/>
+	                        <label for="result" string="Result : "/>
+	                        <field name="result" readonly="True"/>
+                     </sheet>
+                    </form>
+                </field>
+            </record>
+            
+            <record model="ir.ui.view" id="execute_query_tree_view">
+                <field name="name">execute.query.tree</field>
+                <field name="model">execute.query</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree>
+                        <field name="name" string="Name"/>
+                        <field name="type" string="Type"/>
+                        <field name="automate" string = "Run by scheduler?"/>                        
+                    </tree>
+                </field>
+            </record>
+            
+            <record id="execute_query_search_view321" model="ir.ui.view">
+            <field name="name">execute.query.select</field>
+            <field name="model">execute.query</field>
+            <field name="arch" type="xml">
+                <search string="Search Discount">
+                    <field name="name" string="Title"/>                    
+                    <filter string="Select" name="select" domain="[('type', '=', 'select')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Type" name="type" context="{'group_by': 'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+            
+            <record id="action_execute_query"
+				model="ir.actions.act_window">
+				<field name="name">Execute Query</field>
+				<field name="res_model">execute.query</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>	
+				<field name="search_view_id"
+				ref="execute_query_search_view321" />			
+				<field name="context">{}</field>
+				<field name="help" type="html">
+					<p class="oe_view_nocontent_create">
+						Create query
+					</p>
+				</field>
+			</record>
+			
+		<menuitem id="execute_query_menu" name="Execute Query" parent="base.menu_custom" action="action_execute_query"/>
+  </data>
+</odoo>

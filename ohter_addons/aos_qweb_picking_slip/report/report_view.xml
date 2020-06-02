@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    
+        <report 
+        		id="picking_slip_reporting_view"
+                string="Picking Slips"
+                model="stock.picking"
+                report_type="qweb-pdf"
+                file="Picking Slips Detail"
+                name="aos_qweb_picking_slip.report_picking_slip" 
+                menu="True"/>
+
+
+    </data>
+</odoo>

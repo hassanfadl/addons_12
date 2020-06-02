@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Odoo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<!-- odoo description page css -->
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        line-height: 1.1;
+        color: #21272b;
+    }
+
+    ul {
+        color: #616161;
+    }
+
+    * {
+        font-family: "Montserrat", sans-serif;
+    }
+</style>
+
+<body>
+    <!-- Use Odd and even section for repeating sections (on line no. 224 and 275) 
+        and ask sukhjinder singh to fix down arrow image on last section
+    -->
+    <div class="p-md-5" style="padding: 20px">
+        <div class="container">
+            <!-- Header -->
+            <div class="row  mb-sm-4 mb-3 pb-3 justify-content-md-between justify-content-center">
+
+                <div class="text-center mr-5">
+                    <a href="https://ksolves.com/">
+                        <img src="images/ksolves-logo.png" alt="ksolves-logo">
+                    </a>
+                    <div class="mt-3"
+                    style="font-size: 10px;">
+                    <a href="https://www.facebook.com/Ksolves.India" class="text-dark ml-3"> <i
+                            class="fa fa-facebook fa-2x"></i> </a>
+                    <a href="https://www.linkedin.com/company/ksolves" class="text-dark ml-3"> <i
+                            class="fa fa-linkedin fa-2x"></i> </a>
+                    <a href="https://www.youtube.com/channel/UCplv9V47g9VidekGN6Wp1ew" class="text-dark ml-3"> <i
+                            class="fa fa-youtube-play fa-2x"></i> </a>
+                    <a href="https://twitter.com/ksolves_india" class="text-dark ml-3"> <i
+                            class="fa fa-twitter fa-2x"></i> </a>
+
+                </div>
+
+                </div>
+                <div class="mt-md-0 mt-3">
+                    <div class="d-flex align-items-center ">
+                        <h6 class="mb-0 mt-2" style="font-size: 14px;min-width:90px">Community: </h6>
+                       <div class="row mx-0">
+                            <span class="text-white ml-2 mt-2" style="padding: .3em .8em;
+                                            background-color: #875A7B !important;
+                                            font-size: 10px;
+                                            border-radius: 2px;">
+                            <b> v 12.0 <i class="fa fa-check ml-1 "></i></b>
+                        </span>
+                       </div>
+                    </div>
+                    <div class="d-flex align-items-center  mt-1">
+                        <h6 class="mb-0 mt-2" style="font-size: 14px;min-width:90px">Enterprise:</h6>
+                        <div class="row mx-0">
+                                <span class="text-white ml-2 mt-2" style="padding: .3em .8em;
+                                                background-color: #875A7B !important;
+                                                font-size: 10px;
+                                                border-radius: 2px;">
+                                <b> v 12.0 <i class="fa fa-check ml-1 "></i></b>
+                            </span>
+                            </div>
+                    </div>
+
+                </div>
+               
+            </div>
+
+
+
+            <!-- Overviww Section  -->
+            <div class="row  border-left-0 position-relative align-items-center px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5; border-radius: 35px; border-top-left-radius: 0; border-bottom-left-radius: 0;">
+
+                <img src="images/play.png" alt="ksolves" class="position-absolute"
+                    style="top: 0px; width: 33px; left: 0; transform: translateY(-50%) translateX(-100%) !important;">
+
+                <img src="images/play.png" alt="ksolves" class="position-absolute"
+                    style="top: 50%;transform: translateY(-50%) translateX(50%) rotate(90deg) !important;width: 33px;right: 0;">
+
+                <div class="col-lg-6 text-center">
+                    <h2 class="mb-3">OVERVIEW</h2>
+
+                    <div class="mb-3"><img src="images/line.png" alt=""></div>
+
+                    <p style="font-size: 18px; letter-spacing: 0.2px;" class="px-sm-4 p-2">
+                        This app is an extension to the already available chat functionality of Odoo. It provides the
+                    feature of editing and deleting an already sent message.
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+                    <img src="images/overview.png" alt="Overview Ksolves" class="w-100">
+                </div>
+            </div>
+            <!-- Features Section -->
+            <div class="row  position-relative border-right-0 px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5;margin-top: -1px ;transform: translateX(-35px);;border-radius: 35px;border-top-right-radius: 0;border-bottom-right-radius: 0;">
+
+                <img src="images/play.png" alt="ksolves" class="position-absolute"
+                    style="top: 50%;transform: translateY(-50%) translateX(-50%) rotate(90deg) !important;width: 33px;left: 0;">
+
+                <div class="col-lg-5 text-center order-lg-0 order-1">
+                    <img src="images/features.png" alt="Ksolves paytm features" style="width:80%;">
+                </div>
+                <div class="col-lg-7 order-lg-1 order-0">
+                    <h2 class="text-center mb-3">FEATURES</h2>
+                    <div class="text-center mb-3">
+                        <img src="images/line.png" alt="">
+                    </div>
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>You can edit an already sent message up until 15 minutes from the time the message is first sent.</span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>You can delete an already sent message up until 15 minutes from the time the message is first sent.</span>
+                        </li>
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>An edited message displays the “(Edited)” message tag over it.</span>
+                        </li>
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>Once a message is deleted, a default message which reads “This message was deleted.” is displayed in place of the originally deleted message.</span>
+                        </li>
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>You can not only delete the text message, but also delete the attached files i.e. PDFs, images etc. </span>
+                        </li>
+
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>Feature provided to the Admin to delete any user’s individual message line until 48 hours from the time the message is first sent.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- How it Works -->
+            <div class="row border-left-0 align-items-center position-relative px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5;border-radius: 35px;border-top-left-radius: 0;border-bottom-left-radius: 0;margin-top: -1px;">
+                <div class="position-absolute font-weight-bold d-flex align-items-center justify-content-center text-light"
+                    style="top: 50%;transform: translateY(-50%) translateX(50%) !important;right: 0;background: #9c7092;width: 33px;height: 33px;border-radius: 50%;font-size: 20px;
+                        ">
+                    1
+                </div>
+
+                <div class="ml-sm-0" style="margin-left: -20px;">
+                    <h2 class="text-center w-100 mb-3 mt-2">HOW IT WORKS</h2>
+                    <div class="text-center w-100 mb-3"><img src="images/line.png" alt=""></div>
+                    <div>
+                        <ul class="list-unstyled pl-0" style="font-size:18px;">
+                            <li class="d-flex align-items-baseline mb-2">
+                                <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                                <span>Go to Settings Menu.</span>
+                            </li>
+                        </ul>
+                        <img src="images/app_screen/setting.png" alt="setting" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+                    </div>
+                </div>
+            </div>
+            <!-- Odd Section-->
+            <div class="row border-right-0 position-relative px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5;transform: translateX(-35px);border-radius: 35px;border-top-right-radius: 0;border-bottom-right-radius: 0;margin-top: -1px;">
+
+                <div class="position-absolute rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(-50%) !important;left: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    2
+                </div>
+
+                <div class="pl-sm-4 ml-sm-2 pl-3">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>In Settings, go to General Settings and Enable the Chat Edit/Delete App by checking the box.
+                            </span>
+                        </li>
+                        <img src="images/app_screen/chat general setting.png" alt="chat general setting" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>Once Enabled, you will see another checkbox appear named “Allow Admin to delete any chat.” If you wish to enable the feature, you may check the box and save the settings that you have done.
+                            </span>
+                        </li>
+
+                         <img src="images/app_screen/ks_general_setting_feature.png" alt="General Setting Feature" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+                    </ul>
+                </div>
+            </div>
+            <!-- Even Section-->
+            <div class="row align-items-center position-relative border-left-0 px-sm-5 py-sm-5 px-1 py-4 ml-3" style="border: 1px solid #b5b5b5;border-radius: 35px;border-top-left-radius: 0;border-bottom-left-radius: 0;margin-top: -1px;
+                ">
+                <div class="position-absolute rounded-circle text-light font-weight-bold d-flex justify-content-center align-items-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(50%) !important;right: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    3
+                </div>
+
+                <div class="ml-sm-0" style="margin-left: -18px">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>On Enabling the Ksolves Odoo Chat/Edit app, you will notice Edit Icon (<i class="fa fa-pencil"></i>) and Delete Icon (<i
+                                class="fa fa-trash-o"></i>) appear along with your chats.
+                            </span>
+                        </li>
+                    </ul>
+                    <img src="images/app_screen/chat edit delete icons.png" alt="chat edit delete icons" class="w-100 my-3"
+                        style="padding-left: 26px;max-width: 800px;">
+                </div>
+            </div>
+
+            <!-- Odd Section-->
+            <div class="row border-right-0 position-relative px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5;transform: translateX(-35px);border-radius: 35px;border-top-right-radius: 0;border-bottom-right-radius: 0;margin-top: -1px;">
+
+                <div class="position-absolute rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(-50%) !important;left: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    4
+                </div>
+
+                <div class="pl-sm-4 ml-sm-2 pl-3">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>In order to edit an already sent message, select the Edit Icon, and then edit your message as intended and update the new message.
+                                </span>
+                        </li>
+                        <img src="images/app_screen/edit message.png" alt="edit message" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Even Section-->
+            <div class="row align-items-center position-relative border-left-0 px-sm-5 py-sm-5 px-1 py-4 ml-3" style="border: 1px solid #b5b5b5;border-radius: 35px;border-top-left-radius: 0;border-bottom-left-radius: 0;margin-top: -1px;
+                ">
+                <div class="position-absolute rounded-circle text-light font-weight-bold d-flex justify-content-center align-items-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(50%) !important;right: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    5
+                </div>
+
+                <div class="ml-sm-0" style="margin-left: -18px">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>An “(Edited)” tag is displayed over an edited message.</span>
+                        </li>
+                    </ul>
+                    <img src="images/app_screen/edited_tag.png" alt="edited tag" class="w-100 my-3"
+                        style="padding-left: 26px;max-width: 800px;">
+                </div>
+            </div>
+
+            <!-- Odd Section-->
+            <div class="row border-right-0 position-relative px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5;transform: translateX(-35px);border-radius: 35px;border-top-right-radius: 0;border-bottom-right-radius: 0;margin-top: -1px;">
+
+                <div class="position-absolute rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(-50%) !important;left: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    6
+                </div>
+
+                <div class="pl-sm-4 ml-sm-2 pl-3">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>In order to delete an already sent message, select the Delete Icon.</span>
+                        </li>
+                        <img src="images/app_screen/delete_icon.png" alt="delete icon" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Even Section-->
+            <div class="row align-items-center position-relative border-left-0 px-sm-5 py-sm-5 px-1 py-4 ml-3" style="border: 1px solid #b5b5b5;border-radius: 35px;border-top-left-radius: 0;border-bottom-left-radius: 0;margin-top: -1px;
+                ">
+                <div class="position-absolute rounded-circle text-light font-weight-bold d-flex justify-content-center align-items-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(50%) !important;right: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    7
+                </div>
+
+                <div class="ml-sm-0" style="margin-left: -18px">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>Once you select the option to delete an already sent message, a warning pops up asking for your final approval. Select Ok to proceed with your deletion.</span>
+                        </li>
+                    </ul>
+                    <img src="images/app_screen/delete_confirm.png" alt="delete confirmation" class="w-100 my-3"
+                        style="padding-left: 26px;max-width: 800px;">
+                </div>
+            </div>
+
+            <!-- Odd Section-->
+            <div class="row border-right-0 position-relative px-sm-5 py-sm-5 px-1 py-4 ml-3"
+                style="border: 1px solid #b5b5b5;transform: translateX(-35px);border-radius: 35px;border-top-right-radius: 0;border-bottom-right-radius: 0;margin-top: -1px;">
+
+                <div class="position-absolute rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+                    style="top: 50%;transform: translateY(-50%) translateX(-50%) !important;left: 0;background: #9c7092;width: 33px;height: 33px;font-size: 20px;">
+                    8
+                </div>
+
+                <div class="pl-sm-4 ml-sm-2 pl-3">
+                    <ul class="list-unstyled pl-0" style="font-size:18px;">
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>Once a message is deleted by a user, a default message which reads “This message was deleted” is displayed in place of the originally deleted message.
+                            </span>
+                        </li>
+                        <img src="images/app_screen/deleted_message.png" alt="deleted message" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+
+
+                        <li class="d-flex align-items-baseline mb-2">
+                            <img src="images/hand.png" alt="hand pointer" style="width:16px;margin-right:10px">
+                            <span>If an admin deletes a user’s message, a default message which reads “Admin has deleted this message” is displayed in place of the originally deleted message.
+                            </span>
+                        </li>
+                        <img src="images/app_screen/ks_admin_has_deleted.png" alt="admin deleted message" class="w-100 my-3"
+                            style="padding-left: 26px;max-width: 800px;">
+                    </ul>
+                </div>
+                <!-- add this image only to end section -->
+                    <img src="images/play.png" alt="ksolves" class="position-absolute"
+                        style="bottom: 0px; width: 33px; right: 0; transform: translateY(50%) translateX(100%) rotate(90deg) !important;">
+            </div>
+
+            <!-- Popular Apps -->
+            <div class="row px-sm-5 py-sm-5 px-1 py-4">
+                <h2 class="w-100 text-center mb-3">Our Popular Apps</h2>
+                <div class="text-center w-100 mb-3">
+                    <img src="images/line.png" alt="ksolves">
+                </div>
+                <div class="col-sm-4 mt-3">
+                    <a href="https://apps.odoo.com/apps/modules/12.0/ks_dashboard_ninja/" class="d-block"
+                        target="_blank">
+                        <img src="images/dn.jpg" alt="Dashboard ninja" class="w-100">
+                    </a>
+                </div>
+                <div class="col-sm-4 mt-3">
+                    <a href="https://apps.odoo.com/apps/themes/12.0/dynamic_transparent_theme/" class="d-block"
+                        target="_blank">
+                        <img src="images/dtt.png" alt="Dynamic transparent theme" class="w-100">
+                    </a>
+                </div>
+                <div class="col-sm-4 mt-3">
+                    <a href="https://apps.odoo.com/apps/modules/12.0/ks_low_stock_alert/" class="d-block" target="_blank">
+                        <img src="images/lsa.jpeg" alt="Low stock alert" class="w-100">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Ksolves Odoo Services -->
+            <div class="row px-sm-5 py-sm-5 px-1 py-4">
+                <h2 class="w-100 text-center mb-3">Ksolves Odoo Services</h2>
+                <div class="text-center w-100 mb-3">
+                    <img src="images/line.png" alt="ksolves">
+                </div>
+                <div class="col-sm-6 col-lg-4" style="margin-bottom: 20px;">
+                    <div style="border: 1px solid black; ;padding: 30px;" class="text-center h-100">
+                        <h4>
+                            Odoo <br />Implementation
+                        </h4>
+                        <img src="images/support.png" alt="support" style="margin:10px;">
+                        <p>
+                            Have some implementation in mind,we have got you covered.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" style="margin-bottom: 20px;">
+                    <div class="text-center h-100" style="border: 1px solid black; ;padding: 30px;">
+                        <h4>
+                            Odoo <br />Community Apps
+                        </h4>
+                        <img src="images/apps.png" alt="support" style="margin:10px;">
+
+                        <p>
+                            We have a diverse range of Odoo Apps to make your Odoo experience better than ever.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" style="margin-bottom: 20px;">
+                    <div class="text-center h-100" style="border: 1px solid black; ;padding: 30px;">
+                        <h4>
+                            Odoo Support & Maintenance
+                        </h4>
+                        <img src="images/support2.png" alt="support" style="margin:10px;">
+
+                        <p>
+                            We provide exceptional support and maintenance services for Odoo services.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" style="margin-bottom: 20px;">
+                    <div class="text-center h-100" style="border: 1px solid black; ;padding: 30px;">
+                        <h4>
+                            Odoo <br />Customization
+                        </h4>
+                        <img src="images/custom.png" alt="support" style="margin:10px;">
+
+                        <p>
+                            Your requirements, our customized implementation. Have something unique in mind, get in
+                            touch with us.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" style="margin-bottom: 20px;">
+                    <div class="text-center h-100" style="border: 1px solid black; ;padding: 30px;">
+                        <h4>
+                            Odoo <br />Integration Services
+                        </h4>
+                        <img src="images/integrated.png" alt="support" style="margin:10px;">
+
+                        <p>
+                            With our world-class web and API services in Odoo, our integration services are one of the
+                            best in the market.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" style="margin-bottom: 20px;">
+                    <div class="text-center h-100" style="border: 1px solid black; ;padding: 30px;">
+                        <h4>
+                            Odoo Developer Outsourcing
+                        </h4>
+                        <img src="images/develop.png" alt="support" style="margin:10px;">
+
+                        <p>
+                            Need an experienced, talented Odoo developer? Our developers are the best when it comes to
+                            technical knowledge and communication skills.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Ksolves Footer -->
+            <div>
+                <div class="row mx-0 justify-content-sm-between justify-content-center"
+                    style="border-top: 1px solid black;">
+                    <div class="mb-sm-0 mb-3">
+                        <i class="fa fa-envelope fa-2x" style="
+                                                            margin-right: 10px;
+                                                            color: #333;
+                                                            transform: translateY(3px);"></i>
+                        <span style="font-size: 18px;">sales@ksolves.com</span>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="bg-white" style="width: 50px;height: 1px;margin-top: -1px"></div>
+                        <div style="border-right: 1px solid black;height: 50px;transform: translateX(-50%);">
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-mobile fa-2x"
+                            style="margin-right: 10px;color: #333;transform: translateY(4px) scale(1.2);"></i>
+                        <span style="font-size: 18px;">+91 120-4299799‬</span>
+                    </div>
+                </div>
+                <div class="m-auto" style="max-width: 600px;">
+
+                    <p style="line-height: 30px;text-align: center;margin-top: 20px;">
+                        Incepted in 2012, Ksolves has made its presence felt across various verticals, including Odoo
+                        implementation, cloud-based technologies like AWS and Salesforce cloud, Serverless application
+                        development, Hybrid and native mobile applications and Application architecture consulting etc.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- container End -->
+        </div>
+    </div>
+</body>
+
+</html>

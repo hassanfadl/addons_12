@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+	    
+        <record id="view_inventory_form_force_account" model="ir.ui.view">
+            <field name="name">stock.inventory.form.inherit.button</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+	            <field name="accounting_date" position="after">
+	            	<field name="adjustment_type" groups="aos_base_account.group_stock_adjustment_valuation"/>
+	            	<!-- <field name="date_force" groups="aos_force_stock_account.group_stock_force_date_period"/> -->
+	            	<field name="account_force_id" attrs="{'invisible': [('adjustment_type','=','regular')],'required': [('state','=','validate'),('adjustment_type','in',('initial','consume'))]}" groups="aos_base_account.group_stock_adjustment_valuation"/>
+	            </field>
+	            <field name="accounting_date" position="attributes">
+	            	<attribute name="groups">aos_force_stock_account.group_stock_force_date_period</attribute>
+	            </field>
+            </field>
+        </record>
+
+    </data>
+</odoo> 

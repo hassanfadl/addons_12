@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_po_create_wiz_cf" model="ir.ui.view">
+        <field name="name">po.create.wiz.form</field>
+        <field name="model">po.create.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Create Purchase Quotation">
+                <p>
+                    <b>Please Select Vendor.</b>
+                </p>
+                <group>
+                    <group>
+                        <field name='vendor_id' required="1" options="{'no_create': True, 'no_open': True}"/>
+                    </group>
+                    <group>
+                        <field name='scheduled_date' required="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="process" string="Create Purchase Quotation" type="object" class="btn-primary"/>
+                    OR
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

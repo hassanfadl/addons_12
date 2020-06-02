@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ir_web_manifest_all,access_ir_web_manifest_all,model_ir_web_manifest,,1,0,0,0
+access_ir_web_manifest,access_ir_web_manifest,model_ir_web_manifest,base.group_no_one,1,1,0,0

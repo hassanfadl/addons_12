@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="wizard_product_quantity" model="ir.ui.view" >
+            <field name="name">Bulk change quantity</field>
+            <field name="model">wizard.product.change_quantities</field>
+            <field name="arch" type="xml">
+                <form string="Change quantity on hand">
+                    <group>
+                        <field name="location_id"/>
+                        <field name="new_quantity"/>
+                    </group>
+                    <footer>
+                        <button name="change_quantities" class="oe_highlight" type="object" string="Proceed" />
+                        ou
+                        <button class="oe_link" special="cancel" string="Cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window 
+            id="action_wiz_bulk_quantity_change"
+            name="Update Quantity on Hand"
+            src_model="product.product"
+            res_model="wizard.product.change_quantities"
+            view_mode="form"
+            target="new"/>
+
+        <record model="ir.values" id="quantity_change_multi">
+            <field name="model_id" ref="product.model_product_product"/>
+            <field name="name">Change Quantity on hand</field>
+            <field name="key2">client_action_multi</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_wiz_bulk_quantity_change'))" />
+            <field name="key">action</field>
+            <field name="model">product.product</field>
+        </record>
+
+
+    </data>
+</odoo>

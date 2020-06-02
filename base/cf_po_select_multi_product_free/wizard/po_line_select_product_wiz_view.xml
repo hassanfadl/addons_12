@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_po_select_product_wiz_cf" model="ir.ui.view">
+        <field name="name">po.select.product.wiz.form</field>
+        <field name="model">po.select.product.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Select Products">
+                <p>
+                    <b>Please Select Products.</b>
+                </p>
+                <group>
+                    <field name='product_ids' required="1" options="{'no_create': True, 'no_open': True}"/>
+                    <field name='scheduled_date' required="1"/>
+                </group>
+                <field name='purchase_order_id' invisible="1"/>
+                <footer>
+                    <button name="process" string="Apply" type="object" class="btn-primary"/>
+                    OR
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
