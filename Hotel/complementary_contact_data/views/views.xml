@@ -1,0 +1,10 @@
+<odoo>
+
+    <template id="assets_backend" name="list asssets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/complementary_contact_data/static/src/js/contact_info_widget.js"/>
+            <link type="text/css" rel='stylesheet' href='/complementary_contact_data/static/src/css/contact_info_widget.css'/>
+        </xpath>
+    </template>
+
+</odoo>

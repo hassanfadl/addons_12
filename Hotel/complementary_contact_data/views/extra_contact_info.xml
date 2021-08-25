@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="extra_contact_info_form" model="ir.ui.view">
+        <field name="name">extra.contact.info.form</field>
+        <field name="model">extra.contact.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="alert alert-success text-center o_form_header"
+                         attrs="{'invisible': [('contact_info_type', '!=', 'fa-whatsapp')]}"
+                         role="alert"
+                    >
+                        <p>
+                            Use a full phone number in international format. Omit any zeroes, brackets or dashes.
+                            <a href="https://faq.whatsapp.com/en/general/21016748" target="_blank">
+                                Read about international numbers.
+                            </a>
+                        </p>
+                    </div>
+                    <div class="alert alert-success text-center o_form_header"
+                         attrs="{'invisible': [('contact_info_type', '!=', 'fa-telegram')]}"
+                         role="alert"
+                    >
+                        <p>
+                            Use a public Telegram Username.
+                        </p>
+                    </div>
+                    <div class="alert alert-success text-center o_form_header"
+                         attrs="{'invisible': [('contact_info_type', '!=', 'fa-skype')]}"
+                         role="alert"
+                    >
+                        <p>
+                            Use a Skype ID.
+                        </p>
+                    </div>
+                    <group>
+                        <field name="contact_info_type"
+                               required="1"
+                        />
+                        <field name="name"/>
+                        <field name="short_name" invisible="1"/>
+                        <field name="url_type" invisible="1"/>
+                        <field name="comment"/>
+                        <field name="sequence" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,33 @@
+ul.complementary_contacts {
+    list-style: none;
+    padding: 0;
+    cursor: default;
+    width: 100% !important;
+}
+p.no_padding_complementary_contacts {
+    padding: 0;
+    margin: 0;
+}
+li.hide_expand_li {
+    padding-top: 5px;
+}
+li.create_and_edit {
+    margin-top: 5%;
+}
+span.pointer_contact {
+    cursor: pointer;
+}
+span.small_size_label {
+    font-size: 9px !important;
+}
+span.compl_icon {
+    margin-left: 3px;
+/*    font-size: 11px !important;*/
+}
+a.not_decorated {
+    /*text-decoration: none !important;*/
+    color: #4c4c4c;
+}
+.cc_hidden {
+    display: none;
+}

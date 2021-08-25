@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ContactInfoWidget">
+        <ul class="complementary_contacts">
+            <t t-foreach="elements" t-as="el">
+                <li class="hide_expand_li"
+                    t-attf-id="#{el_index}"
+                    t-att-data-id="el.id"
+                >
+                    <p class="no_padding_complementary_contacts">
+                        <a  class="not_decorated"
+                            t-attf-draggable="#{((!readonly) ? true : false)}"
+                        >
+                          <span t-attf-class="fa #{el.contact_info_type}"/>
+                        </a>
+                        <!-- To the needs of discard changes we should have it here -->
+                        <span class="cc_hidden">
+                            <t t-esc="el.name"/>
+                            <t t-esc="el.url_type"/>
+                            <t t-esc="el.sequence"/>
+                        </span>
+                        <t t-if="el.url_type == 'phone'">
+                            <a class="o_badge_text o_field_phone"
+                               t-attf-href="tel:#{el.name}"
+                               t-attf-title="#{el.name}"
+                               target="_blank"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </a>
+                        </t>
+                        <t t-elif="el.url_type == 'mail'">
+                            <a class="o_badge_text"
+                               t-attf-href="mailto:#{el.name}"
+                               t-attf-title="#{el.name}"
+                               target="_blank"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </a>
+                        </t>
+                        <t t-elif="el.url_type == 'url'">
+                            <a class="o_badge_text o_form_uri"
+                               t-attf-href="#{el.name}"
+                               t-attf-title="#{el.name}"
+                               target="_blank"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </a>
+                        </t>
+                        <t t-elif="el.url_type == 'skype'">
+                            <a class="o_badge_text"
+                               t-attf-href="skype:#{el.name}?chat"
+                               t-attf-title="#{el.name}"
+                               target="_blank"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </a>
+                        </t>
+                        <t t-elif="el.url_type == 'telegram'">
+                            <a class="o_badge_text"
+                               t-attf-href="tg://resolve?domain=#{el.name}"
+                               t-attf-title="#{el.name}"
+                               target="_blank"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </a>
+                        </t>
+                        <t t-elif="el.url_type == 'whatsapp'">
+                            <a class="o_badge_text"
+                               t-attf-href="https://wa.me/#{el.name}"
+                               t-attf-title="#{el.name}"
+                               target="_blank"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </a>
+                        </t>
+                        <t t-else="">
+                            <span class="o_badge_text"
+                                  t-attf-title="#{el.name}"
+                            >
+                                <t t-esc="el.short_name"/>
+                            </span>
+                        </t>
+
+                        <span t-if="readonly"
+                              class="pull-right small_size_label"
+                        >
+                            <span class="fa fa-paste o_copy pointer_contact"
+                                  title="Copy to clipboard"
+                                  t-att-data-name="el.name"
+                            />
+                        </span>
+                        <span t-if="!readonly"
+                               t-att-data-id="el.id"
+                               class="pull-right compl_icon"
+                        >
+                            <span class="fa fa-times o_delete pointer_contact"/>
+                        </span>
+                        <!-- It is hidden, since the feature is replaced with drag& drop -->
+                        <span  t-if="!readonly"
+                               t-att-data-id="el.id"
+                               class="pull-right compl_icon cc_hidden"
+                        >
+                            <span class="fa fa-level-up o_sequence pointer_contact"/>
+                        </span>
+                        <span  t-if="!readonly"
+                               t-att-data-id="el.id"
+                               class="pull-right compl_icon"
+                        >
+                            <span class="fa fa-pencil o_edit pointer_contact"/>
+                        </span>
+                    </p>
+                    <p t-if="el.comment" class="no_padding_complementary_contacts">
+                        <i>
+                            <small>(<t t-esc="el.comment"/>)</small>
+                        </i>
+                    </p>
+                </li>
+            </t>
+            <li class="create_and_edit">
+                <a t-if="!readonly" >
+                    <span class="o_create pointer_contact"> Create and edit...</span>
+                </a>
+                <a  t-if="hide_elements"
+                    class="pull-right"
+                >
+                    <span class="o_expand pointer_contact">
+                        <span class="show_button_contact hidden">
+                          <i>
+                            ............. show all <span class="fa fa-chevron-down"/>
+                          </i>
+                        </span>
+                        <span class="hide_button_contact">
+                          <i>
+                             <span class="fa fa-chevron-up"/> hide
+                          </i>
+                        </span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </t>
+
+</templates>
