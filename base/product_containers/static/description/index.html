@@ -1,0 +1,409 @@
+<!-- HEADER -->
+<div>
+	<div style="padding-top: 10px;">
+		<!-- NASLOV -->
+		<p style="text-align: center; padding-top: 20px; margin-bottom: 0; padding-bottom: 0; font-weight: bold; font-size: 37px;">Product Containers module for Odoo v12</p>
+		
+		<!-- VERSION SUPPORT -->
+		<div class="container" style="margin-top: 22px; width: fit-content;">
+			<div class="row">
+				<!-- UNSUPPORTED 
+				<div class="col-md-4" style="justify-content-center;">
+					<div style="margin-left: auto; margin-right: auto; width: 180px; text-align: center; background-color: #fa907f; color: black; padding: 5px 10px; border-radius: 5px; font-weight: 700; font-size: 23px;">
+						Enterprise &#10761;
+					</div>
+				</div> -->
+				<!-- SUPPORTED -->
+				<div class="col-md-4" style="justify-content-center;">
+					<div style="margin-left: auto; margin-right: auto; width: 180px; text-align: center; background-color: #fa907f; color: black; padding: 5px 10px; border-radius: 5px; font-weight: 700; font-size: 23px;">
+						Enterprise &#10761;
+					</div>
+				</div>
+				<div class="col-md-4" style="justify-content-center;">
+					<div style="margin-left: auto; margin-right: auto; width: 180px; text-align: center; background-color: #B1E612; color: black; padding: 5px 10px; border-radius: 5px; font-weight: 700; font-size: 23px;">
+						Community &#10003;
+					</div>
+				</div>
+				<div class="col-md-4" style="justify-content-center;">
+					<div style="margin-left: auto; margin-right: auto; width: 180px; text-align: center; background-color: #fa907f; color: black; padding: 5px 10px; border-radius: 5px; font-weight: 700; font-size: 23px;">
+						Odoo.sh &#10761;
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- TEXT PO NASLOVU -->
+		<div style="text-align:center; margin-top:30px; margin-bottom:35px;">
+			The module allows for efficient management and tracking of containers and pallets as products.<br>
+			The containers are physical products used to store and ship other products eg. Plastic, wooden or metal boxes, pallets, bags etc.<br>
+			They are usually returned to the seller after use, but some containers are meant for single use only and may not be returned - like cardboard boxes.<br>
+			The module is particulary useful for managing and tracking containers in which products are delivered - to be retrieved or to be sold to the customer, together with the main product.
+		</div>
+		<!-- ZAHTEVEK ZA DEMO 
+		<div style= "width:300px; padding-bottom: 20px; margin-left: auto; margin-right: auto;">
+			<a href="mailto:info@editor.si?subject=Demo request" style="width: 100%; height: 100%; text-decoration: none; color: black;">
+				<div style="width: 300px; height: 60px; line-height: 60px; border-radius: 5px; text-align: center; background-color: #ffaa3b; font-weight: bold; font-size: 20px;
+				cursor: pointer; text-decoration: none;">REQUEST A FREE DEMO</div>
+			</a>
+		</div> -->
+		<!-- LOGOS -->
+		<div class="container" style="margin: auto; width: fit-content;">
+			<div class="row">
+				<div class="col-md-6">
+					<span style="text-decoration: none; display: flex;">
+						<img src="images/editor_logo.png" style="margin-left:auto; margin-right: auto;">
+					</span>
+				</div>
+				<div class="col-md-6">
+					<span style="text-decoration: none; display: flex;">
+						<img src="images/odoo_partner.png" style="margin-left:auto; margin-right: auto;">
+					</span>
+				</div>
+			</div>
+		</div>		
+		<!-- GIF -->
+		<div style="display: block; margin: 30px auto; width: 75%; height: auto; border-bottom: 1px solid black;">
+			<img src="images/containerGif.gif" style="width: 100%;">
+		</div>
+	</div>
+</div>
+
+<!-- PILLS -->
+<div>
+	<section class="oe_container" id="loempia_tabs">
+		<div class="row py-4 px-3">
+			<div class="w-100" style="padding-top:30px;border-radius: 10px;">
+				<ul role="tablist" class="nav nav-pills justify-content-center" data-tabs="tabs" id="pills-tab" style="border: none; background-color: transparent;">
+					<li class="nav-item mr-1" style="background-color:#ffaa3b; border-radius: 10px 10px 0px 0px;">
+						<a id="pills-home-tab" data-toggle="pill" href="#pills-features" role="tab" aria-controls="pills-home" aria-selected="true" class="nav-link active show" 
+						style="color: black; outline: none; padding: 14px 50px; font-size: 23px; border-radius: 10px 10px 0px 0px;">
+							Features
+						</a>
+					</li>
+					<li class="nav-item mr-1" style="background-color:#ffaa3b; border-radius: 10px 10px 0px 0px;">
+						<a id="pills-modules-tab" data-toggle="pill" href="#pills-modules" role="tab" aria-controls="pills-home" aria-selected="false" class="nav-link" 
+						style="color: black; outline: none; padding: 14px 50px; font-size: 23px; border-radius: 10px 10px 0px 0px;">
+							Additional Modules
+						</a>
+					</li>
+					<li class="nav-item mr-1" style="background-color:#ffaa3b; border-radius: 10px 10px 0px 0px;">
+						<a id="pills-guide-tab" data-toggle="pill" href="#pills-guide" role="tab" aria-controls="pills-profile" aria-selected="false" class="nav-link" 
+						style="color: black; outline: none; padding: 14px 50px; font-size: 23px; border-radius: 10px 10px 0px 0px;">
+							User Guide
+						</a>
+					</li>
+					<li class="nav-item mr-1" style="background-color:#ffaa3b; border-radius: 10px 10px 0px 0px;">
+						<a id="pills-faq-tab" data-toggle="pill" href="#pills-faq" role="tab" aria-controls="pills-home" aria-selected="false" class="nav-link" 
+						style="color: black; outline: none; padding: 14px 50px; font-size: 23px; border-radius: 10px 10px 0px 0px;">
+							FAQ
+						</a>
+					</li>
+				</ul>
+
+				<div class="tab-content" id="pills-tabContent" style="border-radius: 15px; padding: 6px 12px; background-color: #e6e6e6;">
+
+					<!-- FEATURES -->
+					<div class="px-3 pt-1 tab-pane fade active show" id="pills-features" role="tabpanel" aria-labelledby="pills-home-tab">
+						<div style="width: 100%; padding-top: 40px; padding-bottom: 15px; text-align: center;">
+							<h3>General features:</h3>
+							<p>
+								Create container and pallet products, to put other products in containers and then containers on pallets.<br/>
+								Define how much product a container can carry and how many containers can go on a pallet.
+							</p>
+						</div>
+						<div>
+							<img src="images/container6.png" alt="different contained quantities" style="display: block; max-width: 99%; height: auto; padding: 45px 5px;
+							margin-left: auto; margin-right: auto; margin-bottom:30px;">
+						</div>
+						<div style="width: 100%; padding-top: 40px; padding-bottom: 15px; text-align: center;">
+							<h3>Containers on orders:</h3>
+							<p>
+								Automatically add containers and pallets on sale/purchase order.<br/>
+								Depending on the rules you set up, the number of containers/pallets will change to cover your needs.
+							<p>
+						</div>
+						<div>
+							<img src="images/container2.png" alt="different contained quantities" style="display: block; max-width: 99%; height: auto; padding: 45px 5px;
+							margin-left: auto; margin-right: auto; margin-bottom:30px;">
+						</div>
+						<div style="width: 100%; padding-top: 40px; padding-bottom: 15px; text-align: center;">
+							<h3>Keep track of containers and pallets:</h3>
+							<p>
+								Return containers and pallets to suppliers or retrieve them from customers.<br/>
+								Check how many containers and pallets you have on hand.
+							</p>
+						</div>
+						<div>
+							<img src="images/container9.png" alt="different contained quantities" style="display: block; max-width: 99%; height: auto; padding: 45px 5px;
+							margin-left: auto; margin-right: auto; margin-bottom:30px;">
+						</div>
+					</div>
+					
+					<!-- ADDITIONAL MODULES -->
+					<div class="px-3 pt-1 tab-pane fade" id="pills-modules" role="tabpanel" aria-labelledby="pills-home-tab">
+						<div style="width: 100%; padding-top: 40px; padding-bottom: 45px; text-align: center;">
+							<h3>Expand the functionalities:</h3>
+							<p style="margin-bottom: 80px;">
+								Use our additional modules that work in conjunction with Product Container module and extend its functionalities.<br/>
+								You can further costumize your rules and make packaging even easier.
+							</p>
+							<h3>Product Containers Customer:</h3>
+							<p>
+								With this module you can define specific settings per customer or vendor.<br/>
+								Make product packagings with different rules and choose which customer or vendor it applies on.<br/>
+								Those product packagings will then only be available when you're selling to or buying from those defined on it.<br/>
+								If you don't select any customer or vendor, the product packaging will be available for everyone.
+							</p>
+						</div>
+						<div>
+							<div style="width: 200px; height: 200px; margin: auto; margin-bottom: 40px;">
+								<a href="https://apps.odoo.com/apps/modules/12.0/product_containers_customer/" target="_blank">
+									<img src="images/product_containers_customer.png" alt="Product container customer module" style="display: block; width: 200px; height: auto;	margin-left: auto; margin-right: auto;">
+								</a>
+							</div>	
+						</div>
+						<div style="width: 100%; padding-top: 40px; padding-bottom: 45px; text-align: center;">
+							<h3>Product Containers Tracking:</h3>
+							<p>
+								Receive incoming shipments of products and assign them serial numbers (e.g. 001) while processing it to the container.<br/>
+								The system will automatically create an Incoming move for the container with serial number (i.e. 001).<br/>
+								You can track containers at hand by locations.<br/>
+								Track containers with serial number once issued (together with the Lot/Serial number module).<br>
+								Get exact location of containers with usage of serial numbers.<br>
+							<p>
+						</div>
+						<div>
+							<div style="width: 200px; height: 200px; margin: auto; margin-bottom: 40px;">
+								<a href="https://apps.odoo.com/apps/modules/12.0/product_containers_tracking/" target="_blank">
+									<img src="images/product_containers_tracking.png" alt="Product container tracking module" style="display: block; width: 200px; height: auto;	margin-left: auto; margin-right: auto;">
+								</a>
+							</div>		
+						</div>
+						<!--
+						<div style="width: 100%; padding-top: 40px; padding-bottom: 45px; text-align: center;">
+							<h3>Product Containers Repackaging:</h3>
+							<p>
+								When receiving a shipment, you can move the container directly to the customer without repackaging.<br/>
+								Other option is to empty the container and put in on Containers virtual stock location and re-use it for other shipments.<br/>
+							</p>
+						</div>
+						<div>
+							<div style="width: 200px; height: 200px; margin: auto; margin-bottom: 40px;">
+								<a href="https://apps.odoo.com/apps/modules/12.0/product_containers_repackaging/" target="_blank">
+									<img src="images/product_containers.png" alt="Product container repackaging module" style="display: block; width: 200px; height: auto;	margin-left: auto; margin-right: auto;">
+								</a>
+							</div>	
+						</div>
+						-->
+					</div>
+
+					<!-- USER GUIDE -->
+					<div class="px-3 pt-1 tab-pane fade" id="pills-guide" role="tabpanel" aria-labelledby="pills-home-tab">
+						<h3 style="width: 100%; padding-top: 40px; padding-bottom: 15px; text-align: center;">How to use the module?</h3>
+						<p>
+							<b>How does it work?</b><br>
+							A real-life example for use of containers are plastic boxes used for fruits and vegetables, which you can easily manage and create with this module.<br>
+							First you need to create a product and define it as container, then set the quantity of products for each container.<br>
+							You also have the option to configure a container to carry the product in a larger quantity or to carry different products by selecting the container product in packaging.
+							<hr style="margin-bottom: 70px;">
+							<b>Pallets:</b><br>
+							<ul>
+								<li>Define a product as pallet (e.g. EURO Pallet).</li>
+								<img src="images/container4.png" alt="setting pallet" style="display: block; max-width: 99%; height: auto; padding: 45px 5px; max-width:99%">								
+								<li>When you receive products you can now manually add the pallet to the Purchase order as a product.</li>
+								<li>If the pallet is defined as purchasable in the product settings, it will also be transfered to the supplier invoice with its purchase price.</li>
+								<img src="images/container11.png" alt="pallet to purchase order" style="display: block; max-width: 99%; height: auto; padding: 45px 5px; max-width:99%">
+								<li>That same pallet (EURO Pallet) can also be used on the Sale order as a product.</li>
+								<li>If it's defined as sellable in the product settings, the sale price will be used and invoiced.</li>
+								<li>If it's not sellable however, the price set on Sale order will be 0, and it will only be available on the warehouse OUT.</li>
+								<img src="images/container5.png" alt="pallet to sale order" style="display: block; max-width: 99%; height: auto; padding: 45px 5px; max-width:99%">
+							</ul>
+							<hr style="margin-bottom: 70px;">
+							<b>Containers:</b><br>
+							<ul>
+								<li>First you have to define a product as container (e.g. Plastic Box) and optionally set a Pallet for it.</li>
+								<img src="images/container1.png" alt="setting container" style="display: block; max-width: 99%; height: auto; padding: 45px 5px; max-width:99%">
+								<li>Then create a new Product packaging used for one kind of product (e.g. Plastic Box for Apples) and set Contained quantity.</li>
+								<li>For example: 10kg of Apples (so if you sell 25kg of apples it will automatically add 3 containers to the Sale order).</li>
+								<img src="images/container3.png" alt="setting product packaging" style="display: block; max-width: 99%; height: auto; padding: 45px 5px; max-width:99%">
+								<li>You can also define a container on the product variant itself.</li>
+								<img src="images/container7.png" alt="setting product" style="display: block; max-width: 99%; height: auto; padding: 45px 5px; max-width:99%">
+							</ul>
+						</p>
+					</div>
+
+					<!-- FAQ-->
+					<div class="px-3 pt-1 tab-pane fade " id="pills-faq" role="tabpanel" aria-labelledby="pills-home-tab">
+						<div style="margin-top: 5px; padding-top: 25px; padding-left: 12px; padding-right: 12px; padding-bottom: 50px;">
+							<div class="faq_element" style="margin-top: 2px; margin-bottom: 2px; text-align: center;">
+								<div style="background-color: white; padding: 10px; border-radius: 10px; width: 95%; border: none; text-align: left; outline: none; font-size: 20px; 
+								margin-top: 25px; outline: none;" class="faq_accordion collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false">
+									I want additional features with this module, how can I request them?
+								</div>
+								<div style="padding: 5px 20px; height: auto; font-size: 17px; margin-bottom: 0px !important; border: none; background-color: transparent;
+								width: 95%;	text-align: left; margin-top: 0px; margin-left: -10px; box-shadow: none;" class="answer collapse" id="faq1">
+									To request additional features, please send us a mail to <a href="mailto:podpora@editor.si?subject=Additional features request" 
+									style="text-decoration: underline;">support@editor.si</a> and tell us what features you need.
+								</div>
+							</div>
+							<div class="faq_element" style="margin-top: 2px; margin-bottom: 2px; text-align: center;">
+								<div style="background-color: white; padding: 10px; border-radius: 10px; width: 95%; border: none; text-align: left; outline: none; font-size: 20px; 
+								margin-top: 25px; outline: none;" class="faq_accordion collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false">
+									Will I receive free upgrades if I purchase this module?
+								</div>
+								<div style="padding: 5px 20px; height: auto; font-size: 17px; margin-bottom: 0px !important; border: none; background-color: transparent; 
+								width: 95%;	text-align: left; margin-top: 0px; margin-left: -10px; box-shadow: none !important;" class="answer collapse" id="faq2">
+									We provide access to all versions <b>prior to and including Odoo Version 12.</b><br/>
+									With Odoo <b>Version 13 and newer versions</b> every version will be sold separately.
+								</div>
+							</div>
+							<div class="faq_element" style="margin-top: 2px; margin-bottom: 2px; text-align: center;">
+								<div style="background-color: white; padding: 10px; border-radius: 10px; width: 95%; border: none; text-align: left; outline: none; font-size: 20px; 
+								margin-top: 25px; outline: none;" class="faq_accordion collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false">
+									Is this module compatible with Odoo Enterprise, or only Community?
+								</div>
+								<div style="padding: 5px 20px; height: auto; font-size: 17px; margin-bottom: 0px !important; border: none; background-color: transparent; 
+								width: 95%;	text-align: left; margin-top: 0px; margin-left: -10px; box-shadow: none !important;" class="answer collapse" id="faq3">
+									This module is only compatible with <b>Community version</b>. It is <b>not available on Enterprise</b> (on-premise or Odoo.sh).<br/>
+									The module <b>cannot be installed on Odoo Online</b> (Cloud), since it doesn't allow third-party modules.
+								</div>
+							</div>
+							<div class="faq_element" style="margin-top: 2px; margin-bottom: 2px; text-align: center;">
+								<div style="background-color: white; padding: 10px; border-radius: 10px; width: 95%; border: none; text-align: left; outline: none; font-size: 20px; 
+								margin-top: 25px; outline: none;" class="faq_accordion collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false">
+									Do I need any additional modules for this to work?
+								</div>
+								<div style="padding: 5px 20px; height: auto; font-size: 17px; margin-bottom: 0px !important; border: none; background-color: transparent; 
+								width: 95%;	text-align: left; margin-top: 0px; margin-left: -10px; box-shadow: none !important;" class="answer collapse" id="faq4">
+									For this module to work, you only need the basic <b>Inventory module</b> and access to products.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- FOOTER -->
+<div style="margin-top: 50px;">
+	<!-- Single box -->
+	<h2 style="text-align: center">Our support policy</h2>
+	<div style="width: 50%; display: block; margin-bottom: 10px; margin-left: auto; margin-right: auto; padding: 22px 15px 15px 15px; border: 0.5px solid #ccc; border-radius: 10px;">
+		<div style="width:100%; text-align: center;">
+			<div style="border-bottom: 4px groove #5c5c5c; width: 100px; min-width: 50px;  height: 100px; min-height: 50px; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
+				<img src="images/document.svg" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto;">
+			</div>
+		</div>
+		<div style="margin: auto; text-align: center; padding: 10px 30px 10px 30px; width: 90%;">
+			We provide <b>no support</b> since this is a free module.<br/>
+			If you require any support, you can select one of our <b>support plans</b>.
+		</div>
+	</div>
+	<!-- Double box 
+	<h2 style="text-align: center; margin-top: 80px;">Create a support ticket</h2>
+	<div style="position: relative; width: 70%; margin-bottom: 45px; margin-left: auto; padding: 22px 15px 15px 15px; margin-right: auto; border: 0.5px solid #ccc; border-radius: 10px;">
+		<div style="width: 45%; display: inline-block; margin-left: 0.5%;">
+			<div style="border-bottom: 4px groove #5c5c5c; width: 100px; min-width: 50px;  height: 100px; min-height: 50px; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
+				<img src="images/issueFix.svg" style="height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto; padding-left: 5px;">
+			</div>
+			<div style="margin: auto; text-align: center; padding: 10px 30px 10px 30px;">
+				If you run upon any issues while using our module that is caused due to our module,
+				we provide you with a complementary support for a duration of <b>30 days</b> from the day of purchase of the said module.
+			</div>
+		</div>
+		<div style="width: 2px; height: 230px; display: inline-flex; margin-left: 30px;">
+			<img src="images/line1.png">
+		</div>
+		<div style="width: 45%; display: inline-block; margin-right: 0.5%; float: right;">
+			<div style="border-bottom: 4px groove #5c5c5c; width: 100px; min-width: 50px;  height: 100px; min-height: 50px; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
+				<img src="images/supportDesk.svg" style="margin: auto; height: 100%; width: auto; display: block; margin-left: auto; margin-right: auto;">
+			</div>
+			<div style="margin: auto; text-align: center; padding: 10px 30px 10px 30px;">
+				<br/>To create a support ticket, please send a mail to <a href="mailto:podpora@editor.si?subject=Support request&body=Issue with MRP_LOT module" style="text-decoration: underline;">
+				support@editor.si</a> and provide all the necessary information needed to resolve the issue.
+			</div>
+		</div>
+	</div> -->
+</div>
+<div style="text-align: center; font-size: 22px; border-radius: 10px; border: 1px #ccc solid; width: 400px; margin-left: auto; margin-right: auto; margin-top: 80px; margin-bottom: 80px; padding: 10px;">
+	This module was proudly made in <br/>
+	<b>Europe</b> (<b>Slovenia</b>) by <b>Editor d.o.o.</b>
+</div>
+<!-- SLIDESHOW
+<section class="oe_container" style="padding: 2rem 3rem 1rem;">
+	<h2 style="text-align: center">Check out other modules</h2>
+	<div id="slideshow1" class="row carousel slide" data-ride="carousel" style="display: flex;">
+		<div class="carousel-inner">
+			<div class="carousel-item active" style="min-height: 0px;">
+				<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: 50px; margin-right: -50px;">
+					<a href="https://www.editor.si/" target="_blank">
+						<div style="border-radius: 10px;"> 
+							<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample1.png"> 
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: -50px;">
+					<a href="https://www.editor.si/" target="_blank">
+						<div style="border-radius: 10px;"> 
+							<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample2.png"> 
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="carousel-item" style="min-height: 0px;">
+				<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: 50px; margin-right: -50px;">
+					<a href="https://www.editor.si/" target="_blank">
+						<div style="border-radius: 10px;"> 
+							<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample3.png"> 
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: -50px;">
+					<a href="https://www.editor.si/" target="_blank">
+						<div style="border-radius: 10px;"> 
+							<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample4.png"> 
+						</div>
+					</a>
+				</div>
+			</div> 
+			<div class="carousel-item" style="min-height: 0px;">
+				<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: 50px; margin-right: -50px;">
+					<a href="https://www.editor.si/" target="_blank">
+						<div style="border-radius: 10px;"> 
+							<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample5.png"> 
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: -50px;">
+					<a href="https://www.editor.si/" target="_blank">
+						<div style="border-radius: 10px;"> 
+							<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample6.png"> 
+						</div>
+					</a>
+				</div>
+			</div>
+		</div> 
+		<div class="carousel-item" style="min-height: 0px;">
+			<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: 50px; margin-right: -50px;">
+				<a href="https://www.editor.si/" target="_blank">
+					<div style="border-radius: 10px;"> 
+						<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample3.png"> 
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 mb16 mt16" style="float: left; margin-left: -50px;">
+				<a href="https://www.editor.si/" target="_blank">
+					<div style="border-radius: 10px;"> 
+						<img class="img img-responsive center-block" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="images/Sample4.png"> 
+					</div>
+				</a>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#slideshow1" data-slide="prev" style="left:-25px; width: 35px; color: #000;"> 
+			<span class="carousel-control-prev-icon"><i class="fa fa-chevron-left" style="font-size: 24px"></i></span> 
+		</a> 
+		<a class="carousel-control-next" href="#slideshow1" data-slide="next" style="right:-25px; width: 35px; color: #000;"> 
+			<span class="carousel-control-next-icon"><i class="fa fa-chevron-right" style="font-size: 24px"></i></span> 
+		</a> 
+	</div>
+</section> -->

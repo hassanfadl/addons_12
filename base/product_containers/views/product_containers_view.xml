@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Product Template Form View -->
+        <record id='view_product_template_container_form' model='ir.ui.view'>
+            <field name="name">product.template.container.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <div name="options" position="inside">
+                    <div>
+                        <field name="container_ok" attrs="{'invisible':[('type','=','service')]}" />
+                        <label for="container_ok" attrs="{'invisible':[('type','=','service')]}" />
+                        <field name="pallets_ok" attrs="{'invisible':[('type','=','service')]}" />
+                        <label for="pallets_ok" attrs="{'invisible':[('type','=','service')]}" />
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- Product Form View -->
+        <record id='view_product_container_form' model='ir.ui.view'>
+            <field name="name">product.product.container.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <field name="barcode" position="after">
+                    <field name="container_id"
+                        attrs="{'invisible':['|', '|', ('container_ok','=',True), ('pallets_ok','=',True), ('type','=','service')]}"
+                        context="{'default_container_ok': True}" />
+                    <field name="pallets_id"
+                        attrs="{'invisible':['|', '|', ('pallets_ok','=',True), ('type','=','service'), ('container_ok','=',False)]}" context="{'default_pallets_ok': True}" />
+                    <field name="pallets_qty" attrs="{'invisible':[('pallets_id','=', False)]}" />
+                </field>
+            </field>
+        </record>
+
+        <record id="product.product_packaging_form_view" model="ir.ui.view">
+            <field name="name">product.packaging.form.view</field>
+            <field name="model">product.packaging</field>
+            <field name="priority">14</field>
+            <field name="arch" type="xml">
+                <form string="Product Packaging">
+                    <sheet>
+                        <label for="name" string="Packaging"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group>
+                            <field name="id" invisible='1'/>
+                            <group name="group_product">
+                                <field name="product_id"  required='True' attrs="{'readonly': [('id', '!=', False)]}"/>
+                                <field name="container_id"/>
+                            </group>
+                            <group name="qty">
+                                <label for="qty" string="Contained Min Qty"/>
+                                <div class="o_row">
+                                    <field name="qty"/>
+                                    <field name="product_uom_id" options="{'no_open': True, 'no_create': True}" groups="uom.group_uom"/>
+                                </div>
+                                <label for="max_qty" string="Contained Max Qty"/>
+                                <div class="o_row">
+                                    <field name="max_qty"/>
+                                    <field name="product_uom_id" options="{'no_open': True, 'no_create': True}" groups="uom.group_uom"/>
+                                </div>
+                                <field name="barcode"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

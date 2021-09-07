@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+
+        <record id="clean_setting_tree" model="ir.ui.view">
+            <field name="name">clean.setting.tree</field>
+            <field name="model">clean.setting</field>
+            <field name="arch" type="xml">
+                <tree string="Data Clean Setting">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="clean_setting_form" model="ir.ui.view">
+            <field name="name">clean.setting.form</field>
+            <field name="model">clean.setting</field>
+            <field name="arch" type="xml">
+                <form string="Data Clean Setting">
+                    <header>
+                        <button name="apply_clean" type="object" string="Apply Clean" class="oe_highlight" confirm="Are you sure want to clean the data?"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                            <page string="Lines">
+                                <field name="line_ids">
+                                    <tree editable="buttom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="model_id" domain="[('model', 'not like', 'ir.'), ('transient', '!=', True)]"/>
+                                        <field name="model" readonly="1"/>
+                                        <field name="have_xml_data" readonly="1"/>
+                                        <button name="get_fkey_model" type="object" string="Add Relation Models"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="clean_setting_action" model="ir.actions.act_window">
+            <field name="name">Data Clean Setting</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">clean.setting</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+
+        <menuitem id="clean_setting_menu" name="Data Clean Setting" parent="base.next_id_9" action="clean_setting_action" sequence=""/>
+
+
+    </data>
+</odoo>

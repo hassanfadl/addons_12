@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_clean_setting,access_clean_setting,model_clean_setting,base.group_system,1,1,1,1
+access_clean_setting_line,access_clean_setting_line,model_clean_setting_line,base.group_system,1,1,1,1
+
+

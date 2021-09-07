@@ -1,0 +1,16 @@
+<odoo>
+    <record id="account.group_account_user" model="res.groups">
+        <field name="users"
+               eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="analytic.group_analytic_accounting" model="res.groups">
+        <field name="users"
+               eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="analytic.group_analytic_tags" model="res.groups">
+        <field name="users"
+               eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+</odoo>

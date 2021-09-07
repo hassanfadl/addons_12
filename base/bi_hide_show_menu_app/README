@@ -1,0 +1,5 @@
+1) Version: 12.0.0.1 | Date : 26/08/2020
+-->  Fixed the issue, some menu is not unhide.
+
+2) Version: 12.0.0.2 | Date : 25/02/2021
+-->  Fixed the issue of installation of any modules after installing bi_hide_show_menu_app module.

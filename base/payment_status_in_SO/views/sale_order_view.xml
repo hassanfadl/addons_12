@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+		<record id="sale_order_form_payment" model="ir.ui.view">
+	        <field name="name">sale.order.form.payment</field>
+	        <field name="model">sale.order</field>
+	        <field name="inherit_id" ref="sale.view_order_form"/>
+	        <field name="arch" type="xml">
+	        	<div class="oe_button_box" position="inside">
+	        		<button name="action_view_account_payment" type="object"
+                            class="oe_stat_button" attrs="{'invisible': [('payment_status', '=', False)]}">
+                        <div style="text-align: center;color: black;">
+	                        <div><field name="payment_status"/></div>
+		                    <div><field name="payment_ids_nbr"/></div>
+		                </div>    
+                    </button>
+		        </div>
+	        </field>
+	    </record>
+
+    </data>
+</odoo>

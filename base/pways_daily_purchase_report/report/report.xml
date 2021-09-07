@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	 <report
+            id="daily_purchare_report_id"
+            model="daily.purchase.wizard"
+            string="Periodic Purchase Report"
+            report_type="qweb-pdf"
+            name="pways_daily_purchase_report_v12.daily_template_id"
+            file="pways_daily_purchase_report_v12.daily_template_id"
+            />
+    </data>
+</openerp>

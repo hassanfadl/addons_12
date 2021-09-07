@@ -1,0 +1,22 @@
+
+/* paragraph p at report */
+p {
+    margin-top: 3px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+    
+}
+
+/*  table td margin*/
+.table {
+    > thead > tr > th {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        line-height: 1.3;
+    }
+    > tbody > tr > td{
+        padding-top: 3px;
+        padding-bottom: 3px;
+        line-height: 1.3;
+    }
+}

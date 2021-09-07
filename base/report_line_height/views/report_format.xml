@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Assets for reports -->
+
+<!--    <template id="assets_report_format" inherit_id="report_assets_common">-->
+    <template id="report_assets_common" name="report_format"  inherit_id="web.report_assets_common">
+<xpath expr="." >
+        <link rel="stylesheet" type="text/scss" href="/report_line_height/static/src/scss/report.scss"/>
+        </xpath>
+    </template>
+
+    
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_auto_vacuum_cleaner_tree" model="ir.ui.view">
+            <field name="name">auto.vacuum.cleaner.tree</field>
+            <field name="model">auto.vacuum.cleaner</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="model_id"/>
+                    <field name="interval_number"/>
+                    <field name="interval_type"/>
+                    <field name="cleaning_preference"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_auto_vacuum_cleaner" model="ir.actions.act_window">
+            <field name="name">Auto Vacuum Cleaner</field>
+            <field name="res_model">auto.vacuum.cleaner</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_auto_vacuum_cleaner_tree"/>
+            <field name="help" type="html">
+                <div>
+                    <p>
+                        <b>Configure Your Auto Vacuum Cleaners.</b>
+                    </p>
+                </div>
+            </field>
+        </record>
+
+        <menuitem id="menu_custom_settings" name="Custom Settings" parent="base.menu_administration"
+                  sequence="7"/>
+
+        <menuitem id="auto_vacuum_settings" name="Auto Vacuum Cleaner"
+                  parent="vv_auto_vacuum_system.menu_custom_settings"
+                  action="vv_auto_vacuum_system.action_auto_vacuum_cleaner"
+                  sequence="1"/>
+    </data>
+</odoo>
